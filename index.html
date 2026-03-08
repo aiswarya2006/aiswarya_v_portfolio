@@ -1924,8 +1924,8 @@
 
   function initTheme() {
     const stored = localStorage.getItem(THEME_KEY);
-    const system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    applyTheme(stored || system);
+    const initial = stored === 'light' ? 'light' : 'dark';
+    applyTheme(initial);
   }
 
   function toggleTheme() {
